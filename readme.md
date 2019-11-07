@@ -1,5 +1,5 @@
-# React Start Kit
-A React Start Kit with webpack
+# React Ant From Sample
+A React From power by ant form
 
 ## How to satrt
 ```xml
