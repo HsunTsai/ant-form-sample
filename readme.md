@@ -1,5 +1,5 @@
 # React Ant From Sample
-A React From power by ant form
+A React From powered by ant form
 
 ## How to satrt
 ```xml
