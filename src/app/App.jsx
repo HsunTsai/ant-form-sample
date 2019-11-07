@@ -11,15 +11,15 @@ import {
 import services from './config/services';
 import Header from './components/Header';
 
-import HomeComponent from './containers/Home';
-import AboutComponent from './containers/About';
-import TopicsComponent from './containers/Topics';
+import AntFormSampleComponent from './containers/AntFormSample';
 
 const App = () => {
 	const pages = [
-		{ path: '/home', name: 'Home', component: HomeComponent },
-		{ path: '/about', name: 'About', component: AboutComponent },
-		{ path: '/topic', name: 'Topic', component: TopicsComponent },
+		{
+			path: '/antFormSample',
+			name: 'Ant Form Sample',
+			component: AntFormSampleComponent,
+		},
 	];
 	return (
 		<Router basename={services.getContextRoot}>

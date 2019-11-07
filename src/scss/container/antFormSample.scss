@@ -1,0 +1,13 @@
+.antFormSample {
+	flex: 1;
+	padding: 12px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&__title {
+		color: #666;
+		font-size: 24px;
+		font-weight: bold;
+		margin: 36px 0 12px;
+	}
+}
