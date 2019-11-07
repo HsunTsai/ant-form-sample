@@ -15,12 +15,20 @@ class Agreement extends Component {
 		super(props);
 		// eslint-disable-next-line react/prop-types
 		const { value } = props;
-		if (value)
+		if (value) {
 			this.state = {
 				content: value.content,
 				agree: value.agree,
 				phone: value.phone,
 			};
+		}
+	}
+
+	componentDidMount() {
+		/* default check from */
+		const { onChange } = this.props;
+		onChange(null);
+		this.setState({ error: true });
 	}
 
 	handleChange = (type, value) => {

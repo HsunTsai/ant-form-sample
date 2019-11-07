@@ -42,7 +42,7 @@ const FormSample = ({ form, form: { getFieldDecorator } }) => {
 		{
 			key: 'aggrement',
 			label: 'Aggrement',
-			initialValue: { age: 27, height: 170 },
+			initialValue: {},
 			required: true,
 			message: 'Please finish this agreement',
 			component: <Agreement onChange={ddd => console.log(ddd)} />,

@@ -6,28 +6,6 @@ import { Form, Checkbox, Input } from 'antd';
 import './common.scss';
 
 const Content = ({ form, form: { getFieldDecorator }, onChange }) => {
-	// const handleChange = (type, value) => {
-	// 	switch (type) {
-	// 		case 'checkbox':
-	// 			setCheckbox(value);
-	// 			if (value && signature && signature.length > 0) {
-	// 				onChange({ checkbox: value, signature });
-	// 			} else {
-	// 				onChange(null);
-	// 			}
-	// 			break;
-	// 		case 'signature':
-	// 			setSignature(value);
-	// 			if (checkbox && value && value.length > 0) {
-	// 				onChange({ checkbox, signature: value });
-	// 			} else {
-	// 				onChange(null);
-	// 			}
-	// 			break;
-	// 		default:
-	// 	}
-	// };
-
 	/* 減少頻繁傳送資料至父層 */
 	const handleChange = useRef(
 		lodash.debounce(() => {
@@ -41,16 +19,6 @@ const Content = ({ form, form: { getFieldDecorator }, onChange }) => {
 			});
 		}, 500)
 	).current;
-	// const handleChange = () => {
-	// 	form.validateFields((err, values) => {
-	// 		console.log(err);
-	// 		if (!err) {
-	// 			onChange(values);
-	// 		} else {
-	// 			onChange(null);
-	// 		}
-	// 	});
-	// };
 
 	const formItemSchemas = [
 		{
@@ -58,6 +26,7 @@ const Content = ({ form, form: { getFieldDecorator }, onChange }) => {
 			required: true,
 			component: (
 				<Checkbox
+					defaultChecked={false}
 					onChange={e => {
 						/* Check checkbox is checked */
 						if (e.target.checked) {
@@ -79,7 +48,7 @@ const Content = ({ form, form: { getFieldDecorator }, onChange }) => {
 	];
 
 	return (
-		<Form className="common">
+		<div className="common">
 			<div className="common__data">
 				I am content .... bla bla bla bla bla bla bla bla bla bla bla
 				bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
@@ -98,7 +67,7 @@ const Content = ({ form, form: { getFieldDecorator }, onChange }) => {
 					</Form.Item>
 				);
 			})}
-		</Form>
+		</div>
 	);
 };
 
