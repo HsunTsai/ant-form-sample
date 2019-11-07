@@ -15,9 +15,9 @@ const FormSample = ({ form, form: { getFieldDecorator } }) => {
 		form.validateFields((err, values) => {
 			setError(err);
 			if (!err) {
-				setResult(JSON.stringify(values));
+				setResult(values);
 			} else {
-				setResult(JSON.stringify(err));
+				setResult(err);
 			}
 		});
 	};

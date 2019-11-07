@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import ReactJson from 'react-json-view';
 import './result.scss';
 
 const Result = ({ result, error }) =>
@@ -12,7 +13,11 @@ const Result = ({ result, error }) =>
 					'result__content--error': error,
 				})}
 			>
-				{result}
+				<ReactJson
+					theme="hopscotch"
+					displayDataTypes={false}
+					src={result}
+				/>
 			</div>
 		</div>
 	) : null;
@@ -23,7 +28,7 @@ Result.defaultProps = {
 };
 
 Result.propTypes = {
-	result: PropTypes.string,
+	result: PropTypes.objectOf(PropTypes.any),
 	error: PropTypes.bool,
 };
 

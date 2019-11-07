@@ -43,7 +43,9 @@ const Content = ({ form, form: { getFieldDecorator }, onChange }) => {
 		{
 			key: 'signature',
 			required: true,
-			component: <Input onChange={handleChange} />,
+			component: (
+				<Input placeholder="Signature" onChange={handleChange} />
+			),
 		},
 	];
 
